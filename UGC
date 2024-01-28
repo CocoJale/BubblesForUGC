@@ -1,0 +1,68 @@
+GameName = "Bubbles For UGC"
+
+tab1name = "main"
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateButton("AutoClickQuest", function(value)
+local kdk = true
+while true do
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("MouseClicked"):FireServer()
+wait(1)
+end
+ end)
+
+Tab1:CreateButton("AutoJumpQuest", function(value)
+local kdk = true
+while true do
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+wait(0.3)
+end
+ end)
+
+Tab1:CreateButton("AutoSpin", function(value)
+local kdk = true
+while true do
+game:GetService("ReplicatedStorage"):WaitForChild("RequestWheelSpin"):InvokeServer()
+wait(20)
+end
+ end)
+
+Tab1:CreateButton("AutoClaimQuests", function(value)
+local kdk = true
+while true do
+local args = {
+    [1] = "Runner"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ClaimQuestReward"):FireServer(unpack(args))
+local args = {
+    [1] = "Clicker"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ClaimQuestReward"):FireServer(unpack(args))
+local args = {
+    [1] = "AFK"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ClaimQuestReward"):FireServer(unpack(args))
+local args = {
+    [1] = "Jumper"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ClaimQuestReward"):FireServer(unpack(args))
+wait(1)
+end
+ end)
+
+local Tab2 = GameName:NewSection("Cocojale")
